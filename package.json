@@ -1,0 +1,15 @@
+{
+  "name": "webaxis-blocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@wordpress/scripts": "^8.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-build": "wp-scripts start"
+  },
+  "author": "",
+  "license": "ISC"
+}
