@@ -86,14 +86,115 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/blocks/button/block.js":
+/*!************************************!*\
+  !*** ./src/blocks/button/block.js ***!
+  \************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+var registerBlockType = wp.blocks.registerBlockType;
+var RichText = wp.blockEditor.RichText;
+registerBlockType('webaxis/custom-titre-style2', {
+  title: 'Titre - Style 2',
+  description: 'Block pour créer titre de la page',
+  icon: 'format-image',
+  category: 'common',
+  // custom attributes
+  attributes: {
+    title: {
+      type: 'string',
+      source: 'html',
+      selector: 'h2'
+    },
+    subtitle: {
+      type: 'string',
+      source: 'html',
+      selector: 'p'
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var title = attributes.title,
+        subtitle = attributes.subtitle; // custom functions
+
+    function onChangeTitle(newTitle) {
+      setAttributes({
+        title: newTitle
+      });
+    }
+
+    function onChangeSubtitle(newSubtitle) {
+      setAttributes({
+        subtitle: newSubtitle
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "titre-h1-style2"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h2",
+      placeholder: "Votre titre",
+      value: title,
+      onChange: onChangeTitle
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "p",
+      placeholder: "Votre sous-titre",
+      value: subtitle,
+      onChange: onChangeSubtitle
+    }))];
+  },
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    var title = attributes.title,
+        subtitle = attributes.subtitle;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "titre-h1-style2"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "p",
+      value: subtitle
+    }));
+  },
+  example: {
+    attributes: {
+      title: 'Votre titre',
+      subtitle: 'Votre sous-titre'
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _blocks_button_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/block */ "./src/blocks/button/block.js");
+
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!******************************************!*\
+  !*** external {"this":["wp","element"]} ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+(function() { module.exports = this["wp"]["element"]; }());
 
 /***/ })
 
