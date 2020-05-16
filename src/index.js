@@ -1,2 +1,2 @@
 
-import './blocks/button/block';
+import './blocks/title/block';

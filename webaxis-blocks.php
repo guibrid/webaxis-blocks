@@ -12,7 +12,7 @@ function webaxis_gutenberg_blocks()
     wp_register_script( 'webaxis-blocks-js',  plugin_dir_url( __FILE__ ) . 'build/index.js', 
         array( 'wp-blocks' , 'wp-block-editor', 'wp-components'));
 
-    register_block_type( 'webaxis/custom-titre-style2', array(
+    register_block_type( 'webaxis/custom-title', array(
         'editor_script' => 'webaxis-blocks-js'
     ) );
 }

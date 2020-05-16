@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/blocks/button/block.js":
-/*!************************************!*\
-  !*** ./src/blocks/button/block.js ***!
-  \************************************/
+/***/ "./src/blocks/title/block.js":
+/*!***********************************!*\
+  !*** ./src/blocks/title/block.js ***!
+  \***********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -100,9 +100,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var registerBlockType = wp.blocks.registerBlockType;
 var RichText = wp.blockEditor.RichText;
-registerBlockType('webaxis/custom-titre-style2', {
-  title: 'Titre - Style 2',
-  description: 'Block pour créer titre de la page',
+registerBlockType('webaxis/custom-title', {
+  title: 'Title with subtitle',
+  description: 'Block with h2 title and subtitle',
   icon: 'format-image',
   category: 'common',
   // custom attributes
@@ -141,13 +141,13 @@ registerBlockType('webaxis/custom-titre-style2', {
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "h2",
-      placeholder: "Votre titre",
+      placeholder: "Your title",
       value: title,
       onChange: onChangeTitle
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "p",
-      placeholder: "Votre sous-titre",
+      placeholder: "Your subtitle",
       value: subtitle,
       onChange: onChangeSubtitle
     }))];
@@ -182,7 +182,7 @@ registerBlockType('webaxis/custom-titre-style2', {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _blocks_button_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/block */ "./src/blocks/button/block.js");
+/* harmony import */ var _blocks_title_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/title/block */ "./src/blocks/title/block.js");
 
 
 /***/ }),

@@ -2,9 +2,9 @@
 const { registerBlockType } = wp.blocks;
 const { RichText } = wp.blockEditor;
 
-registerBlockType('webaxis/custom-titre-style2', {
-    title: 'Titre - Style 2',
-    description: 'Block pour créer titre de la page',
+registerBlockType('webaxis/custom-title', {
+    title: 'Title with subtitle',
+    description: 'Block with h2 title and subtitle',
     icon: 'format-image',
     category: 'common',
 
@@ -42,12 +42,12 @@ registerBlockType('webaxis/custom-titre-style2', {
             <div className="titre-h1-style2">
                 <RichText key="editable"
                           tagName="h2"
-                          placeholder="Votre titre"
+                          placeholder="Your title"
                           value={ title }
                           onChange={ onChangeTitle } />
                 <RichText key="editable"
                           tagName="p"
-                          placeholder="Votre sous-titre"
+                          placeholder="Your subtitle"
                           value={ subtitle }
                           onChange={ onChangeSubtitle } />
             </div>
