@@ -17,3 +17,19 @@ function webaxis_gutenberg_blocks()
     ) );
 }
 add_action( 'init', 'webaxis_gutenberg_blocks' );
+
+// my-plugin.php
+ 
+function my_plugin_block_categories( $categories, $post ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'webaxis',
+                'title' => 'Web-Axis Blocks',
+                'icon'  => 'admin-site-alt3',
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'my_plugin_block_categories', 10, 2 );

@@ -6,7 +6,7 @@ registerBlockType('webaxis/custom-title', {
     title: 'Title with subtitle',
     description: 'Block with h2 title and subtitle',
     icon: 'format-image',
-    category: 'common',
+    category: 'webaxis',
 
     // custom attributes
     attributes: {
